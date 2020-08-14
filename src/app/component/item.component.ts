@@ -5,7 +5,7 @@ import { ItemService } from '../service/item.service';
   selector: 'app-items',
   template: `
     <div>
-      Laura
+      test
     </div>
   `,
 })
@@ -13,8 +13,6 @@ export class ItemComponent {
   constructor(private itemService: ItemService) {}
 
   ngOnInit() {
-    this.itemService.getItems().subcribe((item) => {
-      console.log(item);
-    });
+    this.itemService.getItems().pipe().subscribe(console.log);
   }
 }
