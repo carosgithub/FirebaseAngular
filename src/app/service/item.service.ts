@@ -16,7 +16,7 @@ export class ItemService {
   items$: Observable<Item[]>;
 
   constructor(private afs: AngularFirestore) {
-    this.itemsCollection = this.afs.collection('items');
+    this.itemsCollection = this.afs.collection('Items');
     this.items$ = this.itemsCollection.valueChanges();
   }
 

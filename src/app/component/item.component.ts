@@ -13,6 +13,6 @@ export class ItemComponent {
   constructor(private itemService: ItemService) {}
 
   ngOnInit() {
-    this.itemService.getItems().pipe().subscribe(console.log);
+    this.itemService.getItems().subscribe(console.log);
   }
 }
